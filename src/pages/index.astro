@@ -1,16 +1,125 @@
 ---
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+import Card from '../components/Card.astro';
+import Slide from '../components/Slide.astro';
+import style from '../styles/global.css';
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html>
+	    <!-- responsive meta -->
+		<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, maximum-scale=3"
+	  />  
+<Navigation/>
+<Slide/>
+<div>
+	<body> 
+		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+		<h2> Newtronix NextGen Technologies is a technology solutions provider focused on delivering customer value 
+			through high-quality processes and cost-efficient solutions.</h2>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="GEN AI Solutions"
+				body="We specialize in building GEN AI based solutions for any industry/ any usecases supporting your needs on a platform supported by major vendors "
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Machine Learning"
+				body="We build and support any Machine Learning Solutions Existing Or New which would be supported on a Platform Supported by Major Software Vendors"
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Mobile App Development"
+				body="We build new or support existing Mobile Apps required for your Organization as per your Unique needs on both iOS/Android Platforms"
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Web Apps / Site Development"
+				body="We build new or support existing Web Apps required for your Organization as per your Unique needs from hosting on a popular cloud platform to any new features development with Modern technologies"
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Cloud Migration"
+				body="We have expertise in migrating inhouse app to any major cloud vendor platform and would also be able to provide recommendations needed for performance in terms or Architecture or in Technical Stack which fits the needs of cloud platform"
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Application Integration"
+				body="We  have vast experience in building and supporting any Application Integration from your existing webapps or mobile apps to any major erp/crm/legacy mainframe or any other modern third party applications"
+			/>
+		</ul>
+		<h3> We Specialize in developing IT solutions for GEN AI, Machine Learining, Mobile and Web Application Development.</h3>
+		<h1> GEN AI Based Development</h1>
+		<h2> We Specialize in GEN AI based applications on AWS and AZURE OpenAI</h2>
+		<image src="../images/AI2.jpeg" alt="Newtronix" width="1000" height="500" center></image>
+</div>
+<div>
+	<h1> Cloud Development</h1>
+	<h2> We Specialize in Cloud based applications on AWS and Microsoft</h2>
+	<image src="../images/cloud.jpg" alt="Newtronix" width="1000" height="500" center></image>
+
+<Footer />
+</body>
 </html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
