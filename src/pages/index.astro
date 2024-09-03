@@ -3,7 +3,8 @@ import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import Card from '../components/Card.astro';
 import Slide from '../components/Slide.astro';
-import style from '../styles/global.css';
+import GenAI from '../pages/genai.astro';
+import Cloud from '../pages/cloud.astro';
 
 ---
 
@@ -14,15 +15,22 @@ import style from '../styles/global.css';
 		content="width=device-width, initial-scale=1, maximum-scale=3"
 	  />  
 <Navigation/>
+<div>
 <Slide/>
+</div>
+<br>
+<br>
 <div>
 	<body> 
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-		<h2> Newtronix NextGen Technologies is a technology solutions provider focused on delivering customer value 
-			through high-quality processes and cost-efficient solutions.</h2>
+		<h1>Newtronix NextGen Technologies</h1>
+		<h2> Newtronix NextGen Technologies is a Software solutions provider focused on delivering customer value 
+			through high-quality processes and cost-efficient solutions.
+			We Specialize in developing IT solutions for GEN AI, Machine Learining, Mobile and Web Application Development.</h2>
+		<br>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
+				href="/genai/"
 				title="GEN AI Solutions"
 				body="We specialize in building GEN AI based solutions for any industry/ any usecases supporting your needs on a platform supported by major vendors "
 			/>
@@ -42,7 +50,7 @@ import style from '../styles/global.css';
 				body="We build new or support existing Web Apps required for your Organization as per your Unique needs from hosting on a popular cloud platform to any new features development with Modern technologies"
 			/>
 			<Card
-				href="https://astro.build/chat/"
+				href="/cloud/"
 				title="Cloud Migration"
 				body="We have expertise in migrating inhouse app to any major cloud vendor platform and would also be able to provide recommendations needed for performance in terms or Architecture or in Technical Stack which fits the needs of cloud platform"
 			/>
@@ -52,16 +60,7 @@ import style from '../styles/global.css';
 				body="We  have vast experience in building and supporting any Application Integration from your existing webapps or mobile apps to any major erp/crm/legacy mainframe or any other modern third party applications"
 			/>
 		</ul>
-		<h3> We Specialize in developing IT solutions for GEN AI, Machine Learining, Mobile and Web Application Development.</h3>
-		<h1> GEN AI Based Development</h1>
-		<h2> We Specialize in GEN AI based applications on AWS and AZURE OpenAI</h2>
-		<image src="../images/AI2.jpeg" alt="Newtronix" width="1000" height="500" center></image>
 </div>
-<div>
-	<h1> Cloud Development</h1>
-	<h2> We Specialize in Cloud based applications on AWS and Microsoft</h2>
-	<image src="../images/cloud.jpg" alt="Newtronix" width="1000" height="500" center></image>
-
 <Footer />
 </body>
 </html>
