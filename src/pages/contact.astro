@@ -11,56 +11,23 @@ import Footer from '../components/Footer.astro';
 <html>
 <body>
   <Navigation />
-
-  <section class="section">
-    <div class="container">
-      <h1>Contact us </h1> 
-      <div class="section row pb-0">
-        <div class="col-12 md:col-6 lg:col-7">
-          <form class="contact-form" method="POST" action="">
-            <div class="mb-3">
-              <input
-                class="form-input w-full rounded"
-                name="name"
-                type="text"
-                placeholder="Name"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                class="form-input w-full rounded"
-                name="email"
-                type="email"
-                placeholder="Your email"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <input
-                class="form-input w-full rounded"
-                name="subject"
-                type="text"
-                placeholder="Subject"
-                required
-              />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-textarea w-full rounded-md"
-                rows="7"
-                placeholder="Your message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary"> Send Now</button>
-          </form>
-        </div>
-        <div class="content col-12 md:col-6 lg:col-5">
-          <h4 />
-          <p />
-        </div>
-      </div>
-    </div>
-  </section>
+  <h1 align="center"> Contact Us</h1>
+  <br>
+  <br>
+  <h2> Please Reach us out if you have any questions: <a href= "mailto: SrinivasKasoji@newtronixtech.com"> SrinivasKasoji@newtronixtech.com </a>   <br>
+<br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
   <br>
   <br>
@@ -72,3 +39,43 @@ import Footer from '../components/Footer.astro';
   <Footer />
 </body>
 </html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
