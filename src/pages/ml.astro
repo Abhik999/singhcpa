@@ -1,0 +1,66 @@
+---
+import Footer from '../components/Footer.astro';
+import Styles from '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+
+---
+<html>
+<body>
+  <Navigation />
+    <h1> Machine Learning Development</h1>
+    <h2> Machine learning (ML) is the process of using mathematical models of data to help a computer learn without direct instruction. It is considered a subset of artificial intelligence (AI). Machine learning uses algorithms to identify patterns within data, and those patterns are then used to create a data model that can make predictions. With increased data and experience, 
+        the results of machine learning are more accurate much like how humans improve with more practice.</h2>
+        <br>
+    <image src="../images/ML.jpg" alt="Newtronix" width="1000" height="500" center></image>
+    <br>
+    <h2>Benefits of Machine Learning</h2>
+    <li>Uncover insight - Machine learning can help identify a pattern or structure within both structured and unstructured data, helping to identify the story the data is telling.</li>
+    <li>Enhance user experience - Adaptive interfaces, targeted content, chatbots, and voice-enabled virtual assistants are all examples of how machine learning can help optimize the customer experience.</li>
+    <li>Improve data integrity - Machine learning is excellent at data mining and can take it a step further, improving its abilities over time.</li>
+    <li>Reduce risk - As fraud tactics constantly change, machine learning keeps pace—monitoring and identifying new patterns to catch attempts before they are successful.</li>
+    <li>Anticipate customer behavior - Machine learning can mine customer-related data to help identify patterns and behaviors, letting you optimize product recommendations and provide the best customer experience possible.</li>
+    <li>Lower costs - One machine learning application is process automation, which can free up time and resources, allowing your team to focus on what matters most.</li>
+ </body>
+  <Footer />
+</body>
+</html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

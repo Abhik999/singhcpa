@@ -1,73 +1,75 @@
 ---
 import Footer from '../components/Footer.astro';
-import style from '../styles/global.css';
+import Styles from '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 
-const pageTitle = "About Me";
-
-const identity = {
-  firstName: "Sarah",
-  country: "Canada",
-  occupation: "Technical Writer",
-  hobbies: ["photography", "birdwatching", "baseball"],
-};
-
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
-const happy = true;
-const finished = false;
-const goal = 3;
-
-const operatingSystem = "Linux";
-const quantity = 3;
-const footwear = "boots";
-const student = false;
-
 ---
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Astro</title>
-        <title>{pageTitle}</title>
-
-
-    <style>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-    </style>
-  </head>
-   
-  <body class="h-screen bg-gradient-to-b 
-                 from-green-200 to-green-500"> 
+<html>
+<body>
   <Navigation />
-    <h1>{pageTitle}</h1>
-    <h2>... and my new Astro site!</h2>
-    <p>Here are a few facts about me:</p>
-<ul>
-  <li>My name is {identity.firstName}.</li>
-  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-  {identity.hobbies.length >= 2 &&
-    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-  }
-</ul>
-<p>My skills are:</p>
-<ul>
-  {skills.map((skill) => <li>{skill}</li>)}
-</ul>
-{happy && <p>I am happy to be learning Astro!</p>}
-
-{finished && <p>I finished this tutorial!</p>}
-
-{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-
-<p>{operatingSystem}</p>
-{student && <p>I am still in school.</p>}
-<p>I have {quantity + 8} pairs of {footwear}</p>
-{operatingSystem === "MacOS" ? <p>I am using a Mac.</p> : <p>I am not using a Mac.</p>}
-   </body>
-
+    <h1> About Us</h1>
+    <h2> We have highly expereinced and dedicated staff with mutiple decades of expereince in building Technical Solutions. 
+      We have Individuals who has multiple AWS Cloud certification and has through experience in building very complex Solutions.Our teams provides the entire range of IT solutions from strategy consulting to implementation and maintenance across a range of vertical domains.We offer a full-suite of end-to-end services Including project support specialized project services, 
+      vendor management, eBusiness end other specialty services.We specialize in building Next Gen technologies such as Generative AI, Machine Learning, WebApp and Mobile Apps , Migrating Applications to Cloud and End-End Application Integrations</h2>
+        <br>
+  
+    <li><a href="/genai.pdf"> Additional Info on AWS Whitepaper on GenAI</a></li>
+  </body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <Footer />
 </body>
 </html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>

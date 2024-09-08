@@ -5,7 +5,8 @@ import Card from '../components/Card.astro';
 import Slide from '../components/Slide.astro';
 import GenAI from '../pages/genai.astro';
 import Cloud from '../pages/cloud.astro';
-
+import ML from '../pages/ml.astro';
+import WebMobile from '../pages/webmobile.astro';
 ---
 
 <html>
@@ -13,8 +14,9 @@ import Cloud from '../pages/cloud.astro';
 		<meta
 		name="viewport"
 		content="width=device-width, initial-scale=1, maximum-scale=3"
-	  />  
+		  />  
 <Navigation/>
+</html>
 <div>
 <Slide/>
 </div>
@@ -24,7 +26,7 @@ import Cloud from '../pages/cloud.astro';
 	<body> 
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 		<h1>Newtronix NextGen Technologies</h1>
-		<h2> Newtronix NextGen Technologies is a Software solutions provider focused on delivering customer value 
+		<h2> We are a Software solutions provider focused on delivering customer value 
 			through high-quality processes and cost-efficient solutions.
 			We Specialize in developing IT solutions for GEN AI, Machine Learining, Mobile and Web Application Development.</h2>
 		<br>
@@ -35,17 +37,17 @@ import Cloud from '../pages/cloud.astro';
 				body="We specialize in building GEN AI based solutions for any industry/ any usecases supporting your needs on a platform supported by major vendors "
 			/>
 			<Card
-				href="https://astro.build/integrations/"
+				href="/ml/"
 				title="Machine Learning"
 				body="We build and support any Machine Learning Solutions Existing Or New which would be supported on a Platform Supported by Major Software Vendors"
 			/>
 			<Card
-				href="https://astro.build/themes/"
+				href="/webmobile/"
 				title="Mobile App Development"
 				body="We build new or support existing Mobile Apps required for your Organization as per your Unique needs on both iOS/Android Platforms"
 			/>
 			<Card
-				href="https://astro.build/chat/"
+				href="/webmobile/"
 				title="Web Apps / Site Development"
 				body="We build new or support existing Web Apps required for your Organization as per your Unique needs from hosting on a popular cloud platform to any new features development with Modern technologies"
 			/>
@@ -61,6 +63,8 @@ import Cloud from '../pages/cloud.astro';
 			/>
 		</ul>
 </div>
+<br>
+<br>
 <Footer />
 </body>
 </html>
@@ -96,24 +100,6 @@ import Cloud from '../pages/cloud.astro';
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
 	}
 	.link-card-grid {
 		display: grid;
