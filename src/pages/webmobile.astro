@@ -7,10 +7,13 @@ import Navigation from '../components/Navigation.astro';
 <html>
 <body>
   <Navigation />
+  <br>
+  <br>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <h1> Web Apps and Mobile Development</h1>
     <h2> We Expertise is in building and maintaining Web and Mobile Apps Development on a Modern Stack of Technologies</h2>
         <br>
-    <image src="../images/Web-Mobile.jpg" alt="Newtronix" width="1000" height="500" center></image>
+    <image src="../images/Web-Mobile.jpg" alt="Newtronix" width="1000" height="500" class="center"></image>
     <br>
     <h2>Services Offered</h2>
     <li>We help to build brand new webapp or mobile app from ground up based on your needs .</li>
@@ -45,6 +48,15 @@ import Navigation from '../components/Navigation.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		color: white;
+	}
+	h2 {
+		font-size: 1rem;
+		font-weight: 200;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color:white;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -58,5 +70,15 @@ import Navigation from '../components/Navigation.astro';
 		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}
+	html {
+    background-color: rgb(28, 0, 128);
+    font-family: sans-serif;
 	}
 </style>

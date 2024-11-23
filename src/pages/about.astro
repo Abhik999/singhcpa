@@ -4,9 +4,19 @@ import Styles from '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
 
 ---
-<html>
-<body>
-  <Navigation />
+<html style="background-color:rgb(28, 0, 128);>
+		    <!-- responsive meta -->
+			<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=3"
+			  />  
+<Navigation />
+</html>
+<br>
+<body >
+	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+  <div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5"></div>
     <h1> About Us</h1>
     <h2> We have highly expereinced and dedicated staff with mutiple decades of expereince in building Technical Solutions. 
       We have Individuals who has multiple AWS Cloud certification and has through experience in building very complex Solutions.Our teams provides the entire range of IT solutions from strategy consulting to implementation and maintenance across a range of vertical domains.We offer a full-suite of end-to-end services Including project support specialized project services, 
@@ -30,6 +40,7 @@ import Navigation from '../components/Navigation.astro';
   <br>
   <br>
   <br>
+</div>
   <Footer />
 </body>
 </html>
@@ -57,8 +68,16 @@ import Navigation from '../components/Navigation.astro';
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-    color: blue;
+    color: white;
 		margin-bottom: 1em;
+	}
+	h2 {
+		font-size: rem;
+		font-weight: 100;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color:white;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -72,5 +91,9 @@ import Navigation from '../components/Navigation.astro';
 		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	html {
+    background-color: rgb(28, 0, 128);
+    font-family: sans-serif;
 	}
 </style>

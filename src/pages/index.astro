@@ -1,4 +1,5 @@
 ---
+import 'aos/dist/aos.css';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
 import Card from '../components/Card.astro';
@@ -9,14 +10,15 @@ import ML from '../pages/ml.astro';
 import WebMobile from '../pages/webmobile.astro';
 ---
 
-<html>
+<html style="background-color:rgb(28, 0, 128);>
+
 	    <!-- responsive meta -->
-		<meta
-		name="viewport"
-		content="width=device-width, initial-scale=1, maximum-scale=3"
+		<meta name="viewport" content="width=device-width"
 		  />  
 <Navigation/>
 </html>
+<br>
+<br>
 <div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5">
 <Slide/>
 </div>
@@ -25,8 +27,14 @@ import WebMobile from '../pages/webmobile.astro';
 <div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5">
 	<body> 
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-		<h1>Newtronix NextGen Technologies</h1>
-		<h2> We are a software solutions provider dedicated to delivering exceptional value through high-quality, cost-efficient processes. Our expertise lies in developing cutting-edge IT solutions, specializing in Generative AI, Machine Learning, Mobile Application Development, and Web Application Development.</h2>
+		<script>
+			import AOS from "aos";
+			AOS.init();
+		  </script>
+		
+		<h1 data-aos="flip-up" data-aos-delay="300">Newtronix NextGen Technologies</h1>
+		
+		<h2 data-aos="fade-up" data-aos-delay="300"> We are a software solutions provider dedicated to delivering exceptional value through high-quality, cost-efficient processes. Our expertise lies in developing cutting-edge IT solutions, specializing in Generative AI, Machine Learning, Mobile Application Development, and Web Application Development.</h2>
 		<br>
 		<ul role="list" class="link-card-grid">
 			<Card
@@ -91,7 +99,15 @@ import WebMobile from '../pages/webmobile.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
-		color: blue;
+		color: white;
+	}
+	h2 {
+		font-size: rem;
+		font-weight: 100;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color:white;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);

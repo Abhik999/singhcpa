@@ -4,12 +4,17 @@ import Navigation from '../components/Navigation.astro';
 
 ---
 <html>
+	
 <body>
   <Navigation />
+  <br>
+  <br>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
   <h1> Cloud Development</h1>
-	<h2> We Specialize in Cloud based applications on AWS and Microsoft</h2>
-	<image src="../images/cloud1.png" alt="Newtronix" width="1000" height="500" center></image>
+	<h2> We Specialize in building applications on Cloud on AWS and Microsoft Platforms</h2>
+	<image src="../images/cloud1.png" alt="Newtronix" width="1000" height="500" class="center"></image>
   </body>
+</div>
   <Footer />
 </body>
 </html>
@@ -38,6 +43,15 @@ import Navigation from '../components/Navigation.astro';
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
+		color: white;
+	}
+	h2 {
+		font-size: 1rem;
+		font-weight: 200;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color:white;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -51,5 +65,15 @@ import Navigation from '../components/Navigation.astro';
 		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}
+	html {
+    background-color: rgb(28, 0, 128);
+    font-family: sans-serif;
 	}
 </style>
