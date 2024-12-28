@@ -1,41 +1,20 @@
 ---
-
-import { getEntryBySlug } from "astro:content";
-
-const entry = await getEntryBySlug("contact", "index");
-
-import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+
 ---
 <html>
+	
 <body>
   <Navigation />
   <br>
   <br>
   <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-  <h1 align="center"> Contact Us</h1>
-  <br>
-  <br>
-  <h2> Please Reach us out if you have any questions: <a href= "mailto: Kasoji@newtronixtech.com"> Kasoji@newtronixtech.com </a>   <br>
-<br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
+  <h1> Cloud Development</h1>
+	<h2> We Specialize in building applications on Cloud on AWS and Microsoft Platforms</h2>
+	<image src="../images/Application Integration.png" alt="Newtronix" width="1000" height="500" class="center"></image>
+  </body>
+</div>
   <Footer />
 </body>
 </html>
@@ -63,16 +42,16 @@ import Footer from '../components/Footer.astro';
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-    color:white;
 		margin-bottom: 1em;
+		color: white;
 	}
 	h2 {
-		font-size: rem;
-		font-weight: 100;
+		font-size: 1rem;
+		font-weight: 200;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
-		color: white;
+		color:white;
 	}
 	.text-gradient {
 		background-image: var(--accent-gradient);
@@ -86,6 +65,12 @@ import Footer from '../components/Footer.astro';
 		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
 		gap: 2rem;
 		padding: 0;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
 	}
 	html {
     background-color: rgb(28, 0, 128);

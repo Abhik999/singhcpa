@@ -10,15 +10,21 @@ import Navigation from '../components/Navigation.astro';
   <br>
   <br>
   <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-  <div class="max-w-screen-l" ></div>
+  <div class="container" ></div>
+  <div class="text">
     <h1> GEN AI Based Development</h1>
-    <h2> Generative AI is a type of AI that can create new content and ideas,
-        including conversations, stories, images, videos, and music. Generative
-        AI uses foundation models (FMs), which are machine learning (ML)
+  </div>
+  <div class="image">
+	<image src="../images/AI2.jpg" alt="Newtronix" width="1000" height="500" class="center"></image>
+</br>
+  </div>
+  <div class="text">
+     <h2> Generative AI is a type of AI that can create new content and ideas,
+        including conversations, stories, images, videos, and music. 
+		Generative AI uses foundation models (FMs), which are machine learning (ML)
         models pretrained on extensive data for adaptability across various tasks.</h2>
         <br>
-   		<image src="../images/AI2.jpg" alt="Newtronix" width="1000" height="500" class="center"></image>
-		</br>
+	</div>	
     <li><a href="/genai.pdf"> Additional Info on AWS Whitepaper on GenAI</a></li>
 </div> 
   <Footer />
@@ -82,4 +88,20 @@ import Navigation from '../components/Navigation.astro';
     background-color: rgb(28, 0, 128);
     font-family: sans-serif;
   }
+  .container {
+  display: flex;
+  align-items: center;
+  justify-content: center
+  
+}
+
+img {
+  max-width: 100%;
+  max-height:100%;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
 </style>
