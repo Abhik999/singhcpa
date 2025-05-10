@@ -10,34 +10,49 @@ import Footer from '../components/Footer.astro';
 <html>
 <body>
   <Navigation />
-  <br>
+  <main>
   <br>
   <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-  <h1 align="center"> Contact Us</h1>
+  <h1 align="center">Contact Us</h1>
   <br>
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: flex-start;">
+	<!-- Map Column -->
+	<div style="flex: 1; min-width: 300px; text-align: center;">
+	  <iframe 
+		src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.847587625246!2d-117.69355302416197!3d34.099044715257335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c3319fd2d97d23%3A0xd3179f004df73821!2s461%20N%20Central%20Ave%2C%20Upland%2C%20CA%2091786!5e0!3m2!1sen!2sus!4v1746393703774!5m2!1sen!2sus" 
+		width="100%" 
+		height="450" 
+		style="border:0;" 
+		allowfullscreen="" 
+		loading="lazy" 
+		referrerpolicy="no-referrer-when-downgrade">
+	  </iframe>
+	</div>
+  
+	<!-- Address Column -->
+	<div style="flex: 1; min-width: 300px; color: white; font-size: 18px;">
+	  <h2>Our Address</h2>
+	  <p>461 N Central Ave,<br>Upland, CA 91786<br>United States</p>
+	  <p><strong>Phone:</strong>909-440-5169</p>
+	  <p><strong>Cell Phone:</strong>440-829-0128</p>
+	  <p><strong>Fax:</strong> 909-666-7349</p>
+	  <p><strong>Email:</strong> <a href="mailto:BaljinderSingh@singhcpainc.com" style="color: lightblue;">BaljinderSingh@singhcpainc.com</a></p>
+	 <br> 
+	  <h2>Our Address</h2>
+	  <p>3357 View Ridge Dr,<br>Long Beach, CA 90804<br>United States</p>
+	  <p><strong>Email:</strong> <a href="mailto:BaljinderSingh@singhcpainc.com" style="color: lightblue;">BaljinderSingh@singhcpainc.com</a></p>
+	</div>
+  </div>
   <br>
-  <h2> Please Reach us out if you have any questions: <a href= "mailto: Kasoji@newtronixtech.com"> Kasoji@newtronixtech.com </a>   <br>
-<br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  <!-- Calendly link widget begin -->
+	<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kasoji-newtronixtech/30min'});return false;">Schedule Consulation</a>
+<!-- Calendly link widget end -->
+</body></main>  
   <Footer />
 </body>
+
 </html>
 <style>
 	main {
@@ -63,14 +78,14 @@ import Footer from '../components/Footer.astro';
 		font-weight: 700;
 		line-height: 1;
 		text-align: center;
-    color:white;
 		margin-bottom: 1em;
+		color: white;
 	}
 	h2 {
 		font-size: rem;
 		font-weight: 100;
 		line-height: 1;
-		text-align: center;
+		text-align: left;
 		margin-bottom: 1em;
 		color: white;
 	}
@@ -87,8 +102,50 @@ import Footer from '../components/Footer.astro';
 		gap: 2rem;
 		padding: 0;
 	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}
 	html {
     background-color: rgb(28, 0, 128);
     font-family: sans-serif;
-	}
+  }
+  .container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the left */
+  gap: 20px; /* Adds space between the image and text */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.image {
+  flex: 1; /* Allows the image to take up available space */
+  text-align: center; /* Centers the image */
+}
+
+.responsive-image {
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.text {
+  flex: 2; /* Allows the text to take up more space than the image */
+  font-size: 15px;
+  color: white;
+  text-align: left; /* Aligns the text to the left */
+}
+text ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  text-align: right; /* Align the list items to the right */
+}
+
+.text ul li {
+  margin-bottom: 0.5rem; /* Add spacing between list items */
+  color: white; /* Ensure the text color is consistent */
+}
 </style>

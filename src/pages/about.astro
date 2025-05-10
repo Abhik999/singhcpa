@@ -14,6 +14,8 @@ import Navigation from '../components/Navigation.astro';
 </html>
 <br>
 <body >
+
+
 	<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 
   <div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5"></div>
@@ -24,7 +26,7 @@ import Navigation from '../components/Navigation.astro';
         <br>
   
     <li><a href="/genai.pdf"> Additional Info on AWS Whitepaper on GenAI</a></li>
-  </body>
+	</body>
   <br>
   <br>
   <br>
@@ -96,4 +98,19 @@ import Navigation from '../components/Navigation.astro';
     background-color: rgb(28, 0, 128);
     font-family: sans-serif;
 	}
+	.responsive-iframe-container {
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  padding-top: 56.25%; /* Aspect ratio: 16:9 */
+  overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  border: none; /* Remove border for a clean look */
+}
 </style>

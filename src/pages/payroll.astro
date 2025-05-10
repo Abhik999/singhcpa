@@ -1,0 +1,138 @@
+---
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+
+---
+<html >
+<body >
+  <Navigation />
+  <br>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <div class="container" ></div>
+  <div class="text">
+    <h1> Payroll Services</h1>
+  </div>
+</body>
+</html><main>
+<div class="container">
+  <div class="image">
+    <img src="../images/Accounting1.jpg" alt="SinghCPA" class="responsive-image">
+  </div>
+  <div class="text">
+	<p>Managing payroll can be time-consuming and complex. We take the burden off your shoulders by managing every 
+		aspect ensuring your employees are paid accurately, on time, and in full compliance with regulations.
+	</p>
+		<br>  
+  </div>
+</div>
+<br
+<div class="container">
+	<div class="text">
+	  <h4>Payroll services include :</h4>
+	  <ul class="payroll-services-list">
+		<li>Payroll processing and tax filings</li>
+		<li>Direct deposit setup</li>
+		<li>Employee tax form preparation (W-2, 1099)</li>
+		<li>Compliance with federal and state regulations</li>
+	  </ul>
+	</div>
+  </div>
+</main>
+  <Footer />
+</body>
+</html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color: white;
+	}
+	h2 {
+		font-size: rem;
+		font-weight: 100;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 1em;
+		color: white;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}
+	html {
+    background-color: rgb(28, 0, 128);
+    font-family: sans-serif;
+  }
+  .container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the left */
+  gap: 20px; /* Adds space between the image and text */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.image {
+  flex: 1; /* Allows the image to take up available space */
+  text-align: center; /* Centers the image */
+}
+
+.responsive-image {
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.text {
+  flex: 2; /* Allows the text to take up more space than the image */
+  font-size: 15px;
+  color: white;
+  text-align: left; /* Aligns the text to the left */
+}
+.payroll-services-list {
+  list-style: disc; /* Adds bullet points */
+  padding-left: 20px; /* Adds indentation for the bullets */
+  margin-top: 10px; /* Adds spacing above the list */
+  color: white; /* Ensures the text color is consistent */
+  font-size: 14px; /* Adjusts the font size for readability */
+}
+
+.payroll-services-list li {
+  margin-bottom: 0.5rem; /* Adds spacing between list items */
+}
+</style>

@@ -9,8 +9,9 @@ import Navigation from '../components/Navigation.astro';
   <Navigation />
   <br>
   <br>
+  <main
   <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-    <h1> Web Apps and Mobile Development</h1>
+    <h1>Accounting Services </h1>
     <h2> We Expertise is in building and maintaining Web and Mobile Apps Development on a Modern Stack of Technologies</h2>
         <br>
     <image src="../images/Web-Mobile.jpg" alt="Newtronix" width="1000" height="500" class="center"></image>
@@ -20,18 +21,21 @@ import Navigation from '../components/Navigation.astro';
     <h3><li>We can also help to redesign/rearchitect your existing web/mobile app to fit your enhancements for your future needs with modern tech stack.</li></h3>
     <h3><li>We also can help to provide suggestions in tuning the performance of your existing apps to handle more traffic to fit your needs.</li></h3>
  </body>
+</main>
+ </html>
   <Footer />
 </body>
 </html>
 <style>
 	main {
-		margin: auto;
+		margin: 10px;
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+		text-align: left;
 	}
 	.astro-a {
 		position: absolute;
@@ -49,10 +53,12 @@ import Navigation from '../components/Navigation.astro';
 		text-align: center;
 		margin-bottom: 1em;
 		color: white;
+	 	text-align: left;
+		white-space: nowrap; /* Prevent text from wrapping to the next line */
 	}
 	h2 {
-		font-size: 1rem;
-		font-weight: 200;
+		font-size: rem;
+		font-weight: 100;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
@@ -66,6 +72,12 @@ import Navigation from '../components/Navigation.astro';
 		margin-bottom: 1em;
 		color:white;
 	}
+	.text {
+  		flex: 2; /* Allows the text to take up more space than the image */
+  		font-size: 15px;
+  		color: white;
+  		text-align: left; /* Aligns the text to the left */
+		}
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -73,6 +85,13 @@ import Navigation from '../components/Navigation.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
+	.container {
+  		display: flex;
+  		align-items: flex-start; /* Align items to the top */
+  		justify-content: flex-start; /* Align content to the left */
+  		gap: 20px; /* Adds space between the image and text */
+  		flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+		}
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));

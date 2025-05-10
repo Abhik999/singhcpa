@@ -2,13 +2,9 @@
 import 'aos/dist/aos.css';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
-import Card from '../components/Card.astro';
+//import Card from '../components/Card.astro';
+import Card from '../components/newCard.astro';
 import Slide from '../components/Slide.astro';
-import GenAI from '../pages/genai.astro';
-import Cloud from '../pages/cloud.astro';
-import ML from '../pages/ml.astro';
-import WebMobile from '../pages/webmobile.astro';
-import ApplicationIntegration from '../pages/applIntegration.astro';
 ---
 
 <html style="background-color:rgb(28, 0, 128);>
@@ -19,12 +15,14 @@ import ApplicationIntegration from '../pages/applIntegration.astro';
 <Navigation/>
 </html>
 <br>
-<br>
 <div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5">
-<Slide/>
+	<div class="slide-container">
+		<Slide />
+	</div>
 </div>
 <br>
 <br>
+<main>
 <div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5">
 	<body> 
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
@@ -33,100 +31,47 @@ import ApplicationIntegration from '../pages/applIntegration.astro';
 			AOS.init();
 		  </script>
 		
-		<h1 data-aos="flip-up" data-aos-delay="300">Newtronix NextGen Technologies</h1>
+		<h1 data-aos="flip-up" data-aos-delay="300">CPA Accounting & Tax Services </h1>
 		
-		<h2 data-aos="fade-up" data-aos-delay="300"> We are a software solutions provider dedicated to delivering exceptional value through high-quality, cost-efficient processes. Our expertise lies in developing cutting-edge IT solutions, specializing in Generative AI, Machine Learning, Mobile Application Development, and Web Application Development.</h2>
+		<h2 data-aos="fade-up" data-aos-delay="300"> A Single Stop Provider for all your Tax and Accounting Solutions.</h2>
 		<br>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="/genai/"
-				title="GEN AI Solutions"
-				body="We specialize in developing Generative AI-based solutions tailored to any industry and use case, supported by leading platform vendors to meet your specific needs. "
+				href="/taxpreparation/"
+				title="Tax Services"
+				body="At Singh CPA Inc, We support our tax clients with proactive planning and efficient compliance strategies designed to maximize savings and minimize risk."
+				imageSrc="../images/TaxPreparer.jpg" 
 			/>
 			<Card
-				href="/ml/"
-				title="Machine Learning"
-				body=" We build and support both new and existing machine learning solutions, ensuring compatibility with platforms endorsed by major software vendors."
+				href="/accounting/"
+				title="Accounting"
+				body="At Singh CPA Inc, we provide comprehensive accounting services tailored to meet the unique needs of individuals, small businesses, and corporations."
+				imageSrc="../images/Accounting.jpg"
 			/>
 			<Card
-				href="/webmobile/"
-				title="Mobile App Development"
-				body="We develop new mobile apps and support existing ones, tailored to your organization's unique needs on both iOS and Android platforms."
-			/>
-			<Card
-				href="/webmobile/"
-				title="Web Apps / Site Development"
-				body=" We build new web applications and support existing ones, tailored to your organization's unique needs. From hosting on popular cloud platforms to developing new features with modern technologies, we provide comprehensive solutions to meet your requirements."
-			/>
-			<Card
-				href="/cloud/"
-				title="Cloud Migration"
-				body="  We specialize in migrating in-house applications to major cloud platforms. Our expertise includes providing tailored recommendations to optimize performance, focusing on architecture and technical stack adjustments to best fit the needs of the cloud environment."
-			/>
-			<Card
-				href="/applIntegration/"
-				title="Application Integration"
-				body="We have extensive experience in building and supporting application integrations, connecting your existing web and mobile apps with major ERP, CRM, legacy mainframes, or any other modern third-party applications."
-			/>
-		</ul>
-		
-		<h1 data-aos="flip-up" data-aos-delay="300">Industry Expertise</h1>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="/businessexpertise/"
-				title="Banking & Finance"
-				body="We have decades of Expereince in building solutions for Banking and Finance"
-			/>
-			<Card
-				href="/businessexpertise/"
-				title="Health Care"
-				body="We specialize in developing innovative, secure, and compliant applications."
-			/>
-			<Card
-				href="/businessexpertise/"
-				title="Retail & Manufacturing"
-				body="Our solutions are designed to adapt to the ever-evolving needs of the retail industry, driving growth and customer satisfaction"
-			/>
-			<Card
-				href="/businessexpertise/"
-				title="Software Development & Optimization"
-				body="We specialize in building high-performance, scalable, and secure applications tailored to meet the unique needs of various industries"
-			/>
-			<Card
-				href="/businessexpertise/"
-				title="Utilities"
-				body="We have expereince in building applications for Power and Telecommunication Industries. Our expertise includes building analytics and dashboards"
-			/>
-			<Card
-				href="/applIntegration/"
-				title="Application Integration"
-				body="We have extensive experience in building and supporting application integrations, connecting your existing web and mobile apps with major ERP, CRM, legacy mainframes, or any other modern third-party applications."
+				href="/payroll/"
+				title="Payroll Services"
+				body="Managing payroll can be time-consuming and complex. We simplify it by handling every detail, ensuring your employees are paid accurately and on time."
+				imageSrc="../images/Accounting1.jpg"
 			/>
 		</ul>
 </div>
 <br>
 <br>
+</main>
 <Footer />
 </body>
 </html>
 <style>
 	main {
-		margin: auto;
+		margin: 10px;
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
+		text-align: left;
 	}
 	h1 {
 		font-size: 4rem;
@@ -135,6 +80,8 @@ import ApplicationIntegration from '../pages/applIntegration.astro';
 		text-align: center;
 		margin-bottom: 1em;
 		color: white;
+	 	text-align: left;
+		white-space: nowrap; /* Prevent text from wrapping to the next line */
 	}
 	h2 {
 		font-size: rem;
@@ -152,9 +99,21 @@ import ApplicationIntegration from '../pages/applIntegration.astro';
 		background-position: 0%;
 	}
 	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
+	display: flex; /* Use flexbox for better control */
+    flex-wrap: nowrap; /* Allow wrapping on smaller screens */
+    gap: 7rem; /* Add space between cards */
+    padding: 0;
+    justify-content: space-between; /* Distribute cards evenly with space between them */
+    align-items: flex-start; /* Align items to the top */
+	text-align: left; /* Center text inside cards */
+	
+
+}
+.slide-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%; /* Ensure the container spans the full width */
+    margin: 0 auto; /* Center the container itself */
+}
 </style>

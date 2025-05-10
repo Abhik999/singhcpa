@@ -1,0 +1,119 @@
+---
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+
+---
+<html >
+<body >
+  <Navigation />
+  <br>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <div class="container" ></div>
+  <div class="text">
+    <h1> Tax Preparation</h1>
+  </div>
+</body>
+</html><main>
+<div class="container">
+  <div class="image">
+    <img src="../images/TaxPreparer.jpg" alt="Newtronix" class="responsive-image">
+  </div>
+  <div class="text"> 
+      At Singh Cpa Inc, We support our tax clients with proactive planning and efficient compliance 
+	  strategies designed to maximize savings and minimize risk. Our team-based approach ensures clear, 
+	  timely communication and a seamless service experience. With direct involvement from tax partners and specialized professionals, our clients benefit from deep technical 
+	  expertise and personalized solutions tailored to their needs..
+      <br><br>
+     <br>  
+  </div>
+</div>
+  <div class="container">
+	<div class="text">
+	<h4>We offer the following tax services:</h4>
+	
+	<li>Federal, State, and Local</li>
+    <h4>Preparation of federal, state, and international tax returns is the core of our tax services. High technical and industry-specific expertise allows our tax professionals to ensure 
+		our clients tax returns are prepared efficiently and timely.</h4>
+    <li>Corporation, Partnership, and Individual</li>
+    <li>Tax Planning</li>
+    <li>Tax Compliance</li>
+    <li>Tax Research</li>
+    <li>Tax Controversy</li>
+	</div>
+</div>
+</main>
+  <Footer />
+</body>
+</html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color: white;
+	}
+	h2 {
+		font-size: rem;
+		font-weight: 100;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 1em;
+		color: white;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}
+	html {
+    background-color: rgb(28, 0, 128);
+    font-family: sans-serif;
+  	}
+  .container {
+  	display: flex;
+  	align-items: flex-start; /* Align items to the top */
+  	justify-content: flex-start; /* Align content to the left */
+  	gap: 20px; /* Adds space between the image and text */
+  	flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+	}
+	.image {
+  		flex: 1; /* Allows the image to take up available space */
+  		text-align: center; /* Centers the image */
+	}
+	.responsive-image {
+  		max-width: 100%; /* Ensures the image doesn't exceed its container */
+  		height: auto; /* Maintains the aspect ratio */
+  		border-radius: 10px; /* Optional: Adds rounded corners */
+	}
+	.text {
+  		flex: 2; /* Allows the text to take up more space than the image */
+  		font-size: 15px;
+  		color: white;
+  		text-align: left; /* Aligns the text to the left */
+}
+</style>

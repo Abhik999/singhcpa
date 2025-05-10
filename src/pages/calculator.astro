@@ -1,0 +1,206 @@
+---
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+
+---
+<html >
+<body >
+  <Navigation />
+  <br>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <div class="container" ></div>
+  <div class="text">
+    <h1> Calculators</h1>
+  </div>
+</body>
+</html><main>
+<div class="container">
+  <div class="image">
+    <img src="../images/Accounting1.jpg" alt="SinghCPA" class="responsive-image">
+  </div>
+  <div class="text">
+    <p>Welcome to our Financial Calculators page! Use our free, easy-to-use tools to estimate taxes, plan budgets, and make smarter financial decisions. Whether you're an individual taxpayer or a business owner, these calculators can help you stay informed and in control.</p>    <br>  
+  </div>
+</div>
+<br>
+  <div class="container">
+	<div class="text">
+	 <ul>
+    <div class="text">
+        <strong>Available Calculators</strong>
+        <br>
+        <br
+        <ul>
+          <li>Home Mortgage Loan Calculator</li>
+          <div>
+            <iframe src="https://www.calcxml.com/do/hom03?teaser" 
+            height="300" width="600" frameborder="0">
+            </iframe>
+            <br/>
+          </div>
+          <li>Auto Loan Calculator</li>
+          <div>
+            <iframe src="https://www.calcxml.com/do/aut03?teaser" 
+            height="300" width="600" frameborder="0">
+          </iframe>
+          <br/>
+          </div>
+          <br>
+          <li>Debt Paydown or Invest More Calculator</li>
+          <div>
+            <iframe src="https://www.calcxml.com/do/bud04?teaser" 
+            height="300" width="600" frameborder="0">
+            </iframe>
+            <br/>
+          </div>
+          <br>
+          <li>College Savings Calculator</li> 
+          <div>
+            <iframe src="https://www.calcxml.com/do/col04?teaser" 
+            height="300" width="600" frameborder="0">
+            </iframe>
+            <br/>
+          </div>
+          <br> 
+          <li>Adjusting your withholdings</li>
+           <div>
+            <iframe src="https://www.calcxml.com/do/inc02?teaser" 
+            height="600" width="600" frameborder="0">
+            </iframe>
+            <br/>
+          </div>
+           <br>
+           <li>Social Security Estimate Calculator</li>
+           <div>
+              <iframe src="https://www.calcxml.com/do/ret04?teaser" 
+                height="300" width="340" frameborder="0">
+              </iframe>
+              <br/>
+            </div>
+        </ul>
+      </div>
+     </ul>
+  	</div>
+</div>
+</main>
+  <Footer />
+</body>
+</html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color: white;
+	}
+	h2 {
+		font-size: rem;
+		font-weight: 100;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 1em;
+		color: white;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}
+	html {
+    background-color: rgb(28, 0, 128);
+    font-family: sans-serif;
+  }
+  .container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the left */
+  gap: 20px; /* Adds space between the image and text */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+
+.image {
+  flex: 1; /* Allows the image to take up available space */
+  text-align: center; /* Centers the image */
+}
+
+.responsive-image {
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.text {
+  flex: 2; /* Allows the text to take up more space than the image */
+  font-size: 15px;
+  color: white;
+  text-align: left; /* Aligns the text to the left */
+}
+.text ul {
+  list-style: disc; /* Use default bullet points */
+  padding-left: 20px; /* Add padding to indent the bullets */
+  margin: 0; /* Remove extra margin */
+  text-align: left; /* Align the list items to the left */
+}
+
+.text ul li {
+  margin-bottom: 0.5rem; /* Add spacing between list items */
+  color: white; /* Ensure the text color is consistent */
+}
+.calculator {
+            width: 1100;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+}
+.responsive-calculator {
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  padding-top: 56.25%; /* Aspect ratio: 16:9 */
+  overflow: hidden;
+  margin-bottom: 20px; /* Adds spacing between calculators */
+}
+
+.responsive-calculator iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width of the container */
+  height: 100%; /* Full height of the container */
+  border: none; /* Removes border for a clean look */
+}
+</style>

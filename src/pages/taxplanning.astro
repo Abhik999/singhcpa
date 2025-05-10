@@ -1,0 +1,151 @@
+---
+import Footer from '../components/Footer.astro';
+import Navigation from '../components/Navigation.astro';
+
+---
+<html >
+<body >
+  <Navigation />
+  <br>
+  <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+  <div class="container" ></div>
+  <div class="text">
+    <h1> Tax Planning</h1>
+  </div>
+<main>
+<div class="container">
+  <div class="image">
+    <img src="../images/Accounting.jpg" alt="SinghCPA" class="responsive-image">
+  </div>
+  <div class="text">
+    	<p> Effective tax planning is about more than minimizing your tax liability its about creating opportunities for financial growth. At Singh CPA Inc, we understand that every individual and business has unique financial goals. Our tax planning services are tailored to your specific needs, ensuring you take advantage of all available deductions, credits, and strategies to optimize your tax situation. Whether you're an individual looking to maximize your refund or a business seeking to minimize your tax burden,
+        we provide personalized tax planning services designed to align with your individual goals or business objectives.
+	</p>
+  </div>
+</div>
+<div class="container">
+	<div class="text">
+        <p> Whether you're an individual with complex income sources, a small business owner, or a corporation navigating evolving tax laws, our experienced CPAs 
+            work closely with you throughout the year not just at filing time. We analyze your current financial situation, anticipate future events, and develop strategies to help you:       </p>
+	  <ul class="services-list">
+		<li>Reduce tax liabilities</li>
+		<li>Maximize deductions and credits</li>
+		<li>Plan for major life or business events</li>
+		<li>Navigate changing tax laws with confidence</li>
+        <li>Enhance long-term financial stability</li>
+	  </ul>
+      <p> Our proactive approach ensures that you're always prepared, never surprised. With partner-level insight and up-to-date expertise, we help you make informed decisions that support your financial well-being today and into the future
+	<br>
+    <p>
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kasoji-newtronixtech/30min'});return false;">
+            <strong class="highlight">Let&apos;s plan smarter. Contact us to schedule a tax strategy consultation.</strong>
+        </a>
+    </p>
+  </div>
+</div>
+</main>
+  <Footer />
+</body>
+</html>
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+		color: white;
+	}
+	h2 {
+		font-size: rem;
+		font-weight: 100;
+		line-height: 1;
+		text-align: left;
+		margin-bottom: 1em;
+		color: white;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(48ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+	.center {
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+  		width: 50%;
+	}
+	html {
+    background-color: rgb(28, 0, 128);
+    font-family: sans-serif;
+  }
+  .container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the left */
+  gap: 20px; /* Adds space between the image and text */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+.image {
+  flex: 1; /* Allows the image to take up available space */
+  text-align: center; /* Centers the image */
+}
+.responsive-image {
+  max-width: 100%; /* Ensures the image doesn't exceed its container */
+  height: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners */
+}
+.text {
+  flex: 2; /* Allows the text to take up more space than the image */
+  font-size: 15px;
+  color: white;
+  text-align: left; /* Aligns the text to the left */
+}
+.services-list {
+  list-style: disc; /* Adds bullet points */
+  padding-left: 20px; /* Adds indentation for the bullets */
+  margin-top: 10px; /* Adds spacing above the list */
+  color: white; /* Ensures the text color is consistent */
+  font-size: 15px; /* Adjusts the font size for readability */
+}
+.services-list li {
+  margin-bottom: 0.5rem; /* Adds spacing between list items */
+}
+.text h4 {
+  font-size: 18px; /* Adjusts the heading size */
+  font-weight: bold; /* Makes the heading bold */
+  margin-bottom: 10px; /* Adds spacing below the heading */
+}
+.text p {
+  font-size: 15px; /* Adjusts the paragraph font size */
+  line-height: 1.6; /* Improves readability */
+  margin-bottom: 15px; /* Adds spacing below the paragraph */
+}
+strong {
+  font-weight: bold; /* Ensures the text is bold */
+  color: lightblue; /* Optional: Adds a distinct color for emphasis */
+}
+
+.highlight {
+  font-size: 18px; /* Adjusts the font size for emphasis */
+  color: yellow; /* Makes the text stand out */
+  text-decoration: underline; /* Optional: Adds an underline for emphasis */
+}
+</style>
