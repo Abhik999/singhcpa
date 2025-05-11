@@ -2,118 +2,177 @@
 import 'aos/dist/aos.css';
 import Footer from '../components/Footer.astro';
 import Navigation from '../components/Navigation.astro';
-//import Card from '../components/Card.astro';
 import Card from '../components/newCard.astro';
 import Slide from '../components/Slide.astro';
 ---
-
-<html style="background-color:rgb(28, 0, 128);>
-
-	    <!-- responsive meta -->
-		<meta name="viewport" content="width=device-width"
-		  />  
-<Navigation/>
-</html>
-<br>
-<div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5">
-	<div class="slide-container">
-		<Slide />
-	</div>
-</div>
-<br>
-<br>
-<main>
-<div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5">
-	<body> 
+<html style="background-color:rgb(28, 0, 128);">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <Navigation />
+        <div class="max-w-screen-l flex flex-wrap items-center justify-between mx-auto p-5">
+            <div class="slide-container">
+                <Slide />
+            </div>
+        </div>
 		<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 		<script>
 			import AOS from "aos";
 			AOS.init();
 		  </script>
-		
-		<h1 data-aos="flip-up" data-aos-delay="300">CPA Accounting & Tax Services </h1>
-		
-		<h2 data-aos="fade-up" data-aos-delay="300"> A Single Stop Provider for all your Tax and Accounting Solutions.</h2>
-		<br>
-		<ul role="list" class="link-card-grid">
+        <br>
+    <main>
+    <h1 data-aos="flip-up" data-aos-delay="300">CPA Accounting & Tax Services</h1>
+    <h2 data-aos="fade-up" data-aos-delay="300">A Single Stop Provider for all your Tax and Accounting Solutions.</h2>
+	<ul role="list" class="link-card-grid">
+		<div class="card-container">
 			<Card
 				href="/taxpreparation/"
 				title="Tax Services"
 				body="At Singh CPA Inc, We support our tax clients with proactive planning and efficient compliance strategies designed to maximize savings and minimize risk."
 				imageSrc="../images/TaxPreparer.jpg" 
 			/>
+		</div>
+		<div class="card-container">
 			<Card
 				href="/accounting/"
 				title="Accounting"
 				body="At Singh CPA Inc, we provide comprehensive accounting services tailored to meet the unique needs of individuals, small businesses, and corporations."
 				imageSrc="../images/Accounting.jpg"
 			/>
+		</div>
+		<div class="card-container">
 			<Card
 				href="/payroll/"
 				title="Payroll Services"
 				body="Managing payroll can be time-consuming and complex. We simplify it by handling every detail, ensuring your employees are paid accurately and on time."
 				imageSrc="../images/Accounting1.jpg"
 			/>
-		</ul>
-</div>
-<br>
-<br>
+		</div>
+	</ul>
 </main>
 <Footer />
 </body>
 </html>
 <style>
-	main {
-		margin: 10px;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		text-align: left;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-		color: white;
-	 	text-align: left;
-		white-space: nowrap; /* Prevent text from wrapping to the next line */
-	}
-	h2 {
-		font-size: rem;
-		font-weight: 100;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-		color:white;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.link-card-grid {
-	display: flex; /* Use flexbox for better control */
-    flex-wrap: nowrap; /* Allow wrapping on smaller screens */
-    gap: 7rem; /* Add space between cards */
+/* General Styles */
+body {
+    margin: 0;
     padding: 0;
-    justify-content: space-between; /* Distribute cards evenly with space between them */
-    align-items: flex-start; /* Align items to the top */
-	text-align: left; /* Center text inside cards */
-	
-
+    font-family: Arial, sans-serif;
+    background-color: rgb(28, 0, 128);
+    color: white;
+    line-height: 1.6;
 }
+
+/* Main Container */
+main {
+    margin: 10px auto;
+    padding: 1rem;
+    max-width: 1200px; /* Limit the width for large screens */
+    width: 100%; /* Full width for smaller screens */
+    text-align: left;
+}
+
+/* Headings */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1em;
+    color: white;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1em;
+    color: white;
+}
+
+/* Responsive Card Grid */
+.link-card-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 2rem; /* Add space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    padding: 0;
+}
+
+.card-container {
+    flex: 1 1 calc(100% - 2rem); /* Full width for small screens */
+    max-width: 100%; /* Ensure cards don't exceed the container width */
+    margin: 0 auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #23262d;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 1rem;
+}
+
+/* Slide Container */
 .slide-container {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    width: 100%; /* Ensure the container spans the full width */
-    margin: 0 auto; /* Center the container itself */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        flex: 1 1 calc(50% - 2rem); /* Two cards per row on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-container {
+        flex: 1 1 calc(33.33% - 2rem); /* Three cards per row on large screens */
+    }
+}
+.card-container {
+    flex: 1 1 calc(100% - 2rem); /* Full width for small screens */
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex: 1 1 calc(50% - 2rem); /* Two cards per row on medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .card-container {
+        flex: 1 1 calc(33.33% - 2rem); /* Three cards per row on large screens */
+    }
 }
 </style>

@@ -11,6 +11,7 @@ import Footer from '../components/Footer.astro';
 <body>
   <Navigation />
   <main>
+	<div class="contcontainer"></div>
   <br>
   <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
   <h1 align="center">Contact Us</h1>
@@ -147,5 +148,12 @@ text ul {
 .text ul li {
   margin-bottom: 0.5rem; /* Add spacing between list items */
   color: white; /* Ensure the text color is consistent */
+}
+.contcontainer {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+  justify-content: flex-start; /* Align content to the left */
+  gap: 20px; /* Adds space between the image and text */
+  flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
 }
 </style>
