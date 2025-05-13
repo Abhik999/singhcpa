@@ -12,7 +12,7 @@ import Navigation from '../components/Navigation.astro';
   <div class="text">
     <h1> About Us</h1>
   </div>
-	<main>
+	<main class="abt-page">
 		<div class="abtcontainer">
 			<div class="image">
 			  <img src="../images/Accounting.jpg" alt="SinghCPA" class="responsive-image">
@@ -131,5 +131,10 @@ strong {
   justify-content: flex-start; /* Align content to the left */
   gap: 20px; /* Adds space between the image and text */
   flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+.abt-page.text {
+    font-size: 15px;
+    color: white;
+    text-align: left;
 }
 </style>

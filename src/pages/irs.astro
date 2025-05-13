@@ -12,7 +12,7 @@ import Navigation from '../components/Navigation.astro';
   <div class="text">
     <h1> IRS & State Representation</h1>
   </div>
-<main>
+<main class="irs-page">
 <div class="irscontainer">
   <div class="image">
     <img src="../images/Accounting.jpg" alt="SinghCPA" class="responsive-image">
@@ -40,7 +40,7 @@ import Navigation from '../components/Navigation.astro';
     <p>
         <strong>Confidential. Experienced. On your side.</strong>
         <br>
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/kasoji-newtronixtech/30min'});return false;">
+        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/bsrakkar-singhcpainc/30min'});return false;">
             <strong class="highlight">If you're facing a tax issue, reach out today for a confidential consultation.</strong>
         </a>
     </p>
@@ -150,5 +150,10 @@ strong {
   font-size: 18px; /* Adjusts the font size for emphasis */
   color: yellow; /* Makes the text stand out */
   text-decoration: underline; /* Optional: Adds an underline for emphasis */
+}
+.irs-page.text {
+    font-size: 15px;
+    color: white;
+    text-align: left;
 }
 </style>

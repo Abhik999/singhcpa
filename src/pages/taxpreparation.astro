@@ -13,7 +13,7 @@ import Navigation from '../components/Navigation.astro';
     <h1> Tax Preparation</h1>
   </div>
 </body>
-</html><main>
+</html><main class="tax-page">
 <div class="taxcontainer">
   <div class="image">
     <img src="../images/TaxPreparer.jpg" alt="Newtronix" class="responsive-image">
@@ -31,14 +31,16 @@ import Navigation from '../components/Navigation.astro';
 	<div class="text">
 	<h4>We offer the following tax services:</h4>
 	
-	<li>Federal, State, and Local</li>
-    <h4>Preparation of federal, state, and international tax returns is the core of our tax services. High technical and industry-specific expertise allows our tax professionals to ensure 
-		our clients tax returns are prepared efficiently and timely.</h4>
-    <li>Corporation, Partnership, and Individual</li>
-    <li>Tax Planning</li>
-    <li>Tax Compliance</li>
-    <li>Tax Research</li>
-    <li>Tax Controversy</li>
+	<li>Individual & Joint Tax Returns (Form 1040)</li>
+    <li>Business Tax Returns (Sole Proprietor, Partnership, S-Corp, C-Corp)</li>
+    <li>Trusts, Estates, and Nonprofit Tax Filings</li>
+    <li>Multi-State and Out-of-State Tax Returns/li>
+    <li>Amended & Prior-Year Returns</li>
+    <li>Electronic Filing (E-File) for Faster Refunds</li>
+    <li>Review of Prior Returns for Missed Opportunities</li>
+	<br
+	<h4><p>We don&apos;t just fill out forms&mdash;we provide guidance, answer your questions, and help you make smart financial decisions throughout the year. With our attention to detail and commitment to accuracy, you can feel confident that your taxes are in good hands.</p>
+	</h4>
 	</div>
 </div>
 </main>
@@ -115,5 +117,10 @@ import Navigation from '../components/Navigation.astro';
   		font-size: 15px;
   		color: white;
   		text-align: left; /* Aligns the text to the left */
+}
+.tax-page.text {
+    font-size: 15px;
+    color: white;
+    text-align: left;
 }
 </style>
